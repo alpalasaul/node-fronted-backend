@@ -11,8 +11,23 @@ Instalar las siguientes dependencias
 npm install typescript -D
 ```
 
+```bash
 npm run tsc -- --init
-npm isntall @types/express
+```
+
+```bash
+npm install @types/express
+```
+
+```bash
+npm install @types/cors
+```
+
+```bash
+npm install ts-node-dev -D
+```
+
+
 
 ## Fronted
 
