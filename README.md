@@ -46,4 +46,10 @@ expo init app-ejemplo
 
 Para abrir en la web se eben instalar las dependencias necesarias
 
+```bash
 npm i @react-native:native.slack
+```
+
+```bash
+npm install --save react-native-vector-icons
+```
