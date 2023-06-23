@@ -11,18 +11,23 @@ export default function Navigation() {
     return (
         <Tab.Navigator>
             <Tab.Screen name="Menu" component={ProfileCard} options={{
-                tabBarLabel: "Home",
+                tabBarLabel: "Inicio",
                 tabBarIcon: ({color, size}) => {
                     return <MaterialCommunityIcons name="home" color={color} size={size} />
                 }
             }} />
-            <Tab.Screen name="list" component={List} options={{
+            <Tab.Screen name="List" component={List} options={{
                 tabBarLabel: "Listado",
                 tabBarIcon: ({color, size}) => {
                     return <MaterialCommunityIcons name="clipboard-list" color={color} size={size} />
                 }
             }} />
-            <Tab.Screen name="Profile" component={ProfileCard} />
+            <Tab.Screen name="Profile" component={ProfileCard} options={{
+                tabBarLabel: "Perfil",
+                tabBarIcon: ({color, size}) => {
+                    return <MaterialCommunityIcons name="account-circle-outline" color={color} size={size} />
+                }
+            }} />
         </Tab.Navigator>
     );
 }

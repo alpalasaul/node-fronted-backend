@@ -40,7 +40,7 @@ export default function ProfileCard() {
 
 const styles = StyleSheet.create({
     container: {
-        width: "50%",
+        width: "100%",
         alignItems: 'center'
     },
     coverPhoto: {
