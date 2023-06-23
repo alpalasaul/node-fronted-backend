@@ -24,13 +24,13 @@ export default function ProfileCard() {
                 </Text>
             </View>
             <View style={styles.buttonContainer}>
-                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://twitter.com")}>
+                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://twitter.com/alpalasaul")}>
                     {twitter}
                 </Text>
-                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://instagram.com")}>
+                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://instagram.com/alpalasaul")}>
                     {instagram}
                 </Text>
-                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://linkedin.com")}>
+                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://linkedin.com/alpalasaul")}>
                     {linkedin}
                 </Text>
             </View>

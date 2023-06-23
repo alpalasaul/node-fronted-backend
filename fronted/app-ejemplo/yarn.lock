@@ -1259,27 +1259,6 @@
     "node-forge" "^1.2.1"
     "nullthrows" "^1.1.1"
 
-"@expo/config-plugins@^4.0.2":
-  "integrity" "sha512-RVvU40RtZt12HavuDAe+LDIq9lHj7sheOfMEHdmpJ/uTA8pgvkbc56XF6JHQD+yRr6+uhhb+JnAasGq49dsQbw=="
-  "resolved" "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-4.1.5.tgz"
-  "version" "4.1.5"
-  dependencies:
-    "@expo/config-types" "^45.0.0"
-    "@expo/json-file" "8.2.36"
-    "@expo/plist" "0.0.18"
-    "@expo/sdk-runtime-versions" "^1.0.0"
-    "@react-native/normalize-color" "^2.0.0"
-    "chalk" "^4.1.2"
-    "debug" "^4.3.1"
-    "find-up" "~5.0.0"
-    "getenv" "^1.0.0"
-    "glob" "7.1.6"
-    "resolve-from" "^5.0.0"
-    "semver" "^7.3.5"
-    "slash" "^3.0.0"
-    "xcode" "^3.0.1"
-    "xml2js" "0.4.23"
-
 "@expo/config-plugins@~6.0.0", "@expo/config-plugins@6.0.2":
   "integrity" "sha512-Cn01fXMHwjU042EgO9oO3Mna0o/UCrW91MQLMbJa4pXM41CYGjNgVy1EVXiuRRx/upegHhvltBw5D+JaUm8aZQ=="
   "resolved" "https://registry.npmjs.org/@expo/config-plugins/-/config-plugins-6.0.2.tgz"
@@ -1300,11 +1279,6 @@
     "slash" "^3.0.0"
     "xcode" "^3.0.1"
     "xml2js" "0.4.23"
-
-"@expo/config-types@^45.0.0":
-  "integrity" "sha512-/QGhhLWyaGautgEyU50UJr5YqKJix5t77ePTwreOVAhmZH+ff3nrrtYTTnccx+qF08ZNQmfAyYMCD3rQfzpiJA=="
-  "resolved" "https://registry.npmjs.org/@expo/config-types/-/config-types-45.0.0.tgz"
-  "version" "45.0.0"
 
 "@expo/config-types@^48.0.0":
   "integrity" "sha512-DwyV4jTy/+cLzXGAo1xftS6mVlSiLIWZjl9DjTCLPFVgNYQxnh7htPilRv4rBhiNs7KaznWqKU70+4zQoKVT9A=="
@@ -1412,15 +1386,6 @@
     "json5" "^2.2.2"
     "write-file-atomic" "^2.3.0"
 
-"@expo/json-file@8.2.36":
-  "integrity" "sha512-tOZfTiIFA5KmMpdW9KF7bc6CFiGjb0xnbieJhTGlHrLL+ps2G0OkqmuZ3pFEXBOMnJYUVpnSy++52LFxvpa5ZQ=="
-  "resolved" "https://registry.npmjs.org/@expo/json-file/-/json-file-8.2.36.tgz"
-  "version" "8.2.36"
-  dependencies:
-    "@babel/code-frame" "~7.10.4"
-    "json5" "^1.0.1"
-    "write-file-atomic" "^2.3.0"
-
 "@expo/metro-config@~0.7.0":
   "integrity" "sha512-vGWU62Zp5pRGw5IEHDNdqvsy62/hu/Na7bswePYVjoaItOjJY7+qilFeF0AAK+3V8qAM8fpltH3ByylKfWaA7A=="
   "resolved" "https://registry.npmjs.org/@expo/metro-config/-/metro-config-0.7.1.tgz"
@@ -1465,15 +1430,6 @@
   "version" "0.0.20"
   dependencies:
     "@xmldom/xmldom" "~0.7.7"
-    "base64-js" "^1.2.3"
-    "xmlbuilder" "^14.0.0"
-
-"@expo/plist@0.0.18":
-  "integrity" "sha512-+48gRqUiz65R21CZ/IXa7RNBXgAI/uPSdvJqoN9x1hfL44DNbUoWHgHiEXTx7XelcATpDwNTz6sHLfy0iNqf+w=="
-  "resolved" "https://registry.npmjs.org/@expo/plist/-/plist-0.0.18.tgz"
-  "version" "0.0.18"
-  dependencies:
-    "@xmldom/xmldom" "~0.7.0"
     "base64-js" "^1.2.3"
     "xmlbuilder" "^14.0.0"
 
@@ -2385,7 +2341,7 @@
     "@webassemblyjs/ast" "1.11.6"
     "@xtuc/long" "4.2.2"
 
-"@xmldom/xmldom@~0.7.0", "@xmldom/xmldom@~0.7.7":
+"@xmldom/xmldom@~0.7.7":
   "integrity" "sha512-UDi3g6Jss/W5FnSzO9jCtQwEpfymt0M+sPPlmLhDH6h2TJ8j4ESE/LpmNPBij15J5NKkk4/cg/qoVMdWI3vnlQ=="
   "resolved" "https://registry.npmjs.org/@xmldom/xmldom/-/xmldom-0.7.11.tgz"
   "version" "0.7.11"
@@ -4221,12 +4177,11 @@
     "compare-versions" "^3.4.0"
     "invariant" "^2.2.4"
 
-"expo-navigation-bar@^1.1.2":
-  "integrity" "sha512-6TEmFArrCazRKrhQrWho1sBEXiFBP+7MIcAeZ5wEB+QEb7ZkYmC+JKFfZl3oz9VWD7nnhgcLRgFE9XL0n74Fow=="
-  "resolved" "https://registry.npmjs.org/expo-navigation-bar/-/expo-navigation-bar-1.1.2.tgz"
-  "version" "1.1.2"
+"expo-navigation-bar@~2.1.1":
+  "integrity" "sha512-UXTfK5Uv65qCFEro9XJY1gxViaqKFB4996OkC3HChGeitGWolCtd7VzVBYKDyfn4EqryDMedrNIqYNWLEFjIZw=="
+  "resolved" "https://registry.npmjs.org/expo-navigation-bar/-/expo-navigation-bar-2.1.1.tgz"
+  "version" "2.1.1"
   dependencies:
-    "@expo/config-plugins" "^4.0.2"
     "@react-native/normalize-color" "^2.0.0"
     "debug" "^4.3.2"
 
@@ -5647,13 +5602,6 @@
   "integrity" "sha512-4xrs1aW+6N5DalkqSVA8fxh458CXvR99WU8WLKmq4v8eWAL86Xo3BVqyd3SkA9wEVjCMqyvvRRkshAdOnBp5rw=="
   "resolved" "https://registry.npmjs.org/json5/-/json5-0.5.1.tgz"
   "version" "0.5.1"
-
-"json5@^1.0.1":
-  "integrity" "sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA=="
-  "resolved" "https://registry.npmjs.org/json5/-/json5-1.0.2.tgz"
-  "version" "1.0.2"
-  dependencies:
-    "minimist" "^1.2.0"
 
 "json5@^2.1.2", "json5@^2.2.2":
   "integrity" "sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg=="
