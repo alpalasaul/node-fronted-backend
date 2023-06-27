@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
         display: 'flex'
     },
     taskWrapper: {
-        paddingTop: 80,
+        paddingTop: 20,
         paddingHorizontal: 20,
         height: 900
     },
@@ -106,13 +106,13 @@ const styles = StyleSheet.create({
     }, 
     modalView: {
         margin: 0,
-        backgroundColor: "whide",
+        backgroundColor: "white",
         borderRadius: 20,
         padding: 35,
         alignItems: 'center',
         shadowColor: "#000",
         width: "100%",
-        height: 700,
+        height: 300,
         shadowOffset: {
             width: 0,
             height: 2
@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     modalText: {
-        marginBottom: "center",
+        marginBottom: 15,
         textAlign: 'center',
         width: "100%"
     }

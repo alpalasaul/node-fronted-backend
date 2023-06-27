@@ -4,6 +4,7 @@ import Menu from "./components/home/Menu";
 import ProfileCard from "./components/home/ProfileCard";
 import { MaterialCommunityIcons } from "react-native-vector-icons"
 import List from "./components/list/List";
+import Form from "./components/Form";
 
 const Tab = createBottomTabNavigator();
 
@@ -20,6 +21,12 @@ export default function Navigation() {
                 tabBarLabel: "Listado",
                 tabBarIcon: ({color, size}) => {
                     return <MaterialCommunityIcons name="clipboard-list" color={color} size={size} />
+                }
+            }} />
+            <Tab.Screen name="Nombre" component={Form} options={{
+                tabBarLabel: "Nombre",
+                tabBarIcon: ({color, size}) => {
+                    return <MaterialCommunityIcons name="pencil-circle-outline" color={color} size={size} />
                 }
             }} />
             <Tab.Screen name="Profile" component={ProfileCard} options={{

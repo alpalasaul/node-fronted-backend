@@ -3,7 +3,7 @@ import { Image, Linking, StyleSheet, Text, TouchableOpacity, View } from "react-
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 const instagram_username = <Icon name='instagram' size={30} color="black" />
-const portfolio_url = <Icon name='instagram' size={30} color="black" />
+const portfolio_url = <Icon name='globe' size={30} color="black" />
 
 /*
 
@@ -21,30 +21,30 @@ borrar el usuario
 
 */
 
-export default function Profile({task, closeProfile}) {
+export default function Profile({ task, closeProfile }) {
     const item = task.item
     return (
         <View style={styles.item}>
             <View style={styles.supimage}>
                 <View style={styles.leftSide}>
-                    <Image 
+                    <Image
                         style={styles.image}
-                        source={{uri: item.urls.raw}}
+                        source={{ uri: item.urls.raw }}
                     />
                 </View>
                 <View style={styles.rightSide}>
-                    <Text style={{color: 'blue'}} onPress={() => {
+                    <Text style={{ color: 'blue' }} onPress={() => {
                         Linking.openURL(item.user.portfolio_url)
                     }} >
                         {item.user.name}
                     </Text>
                     <View style={styles.redes}>
-                        <Text style={{color: 'blue'}} onPress={() => {
-                            Linking.openURL(`https://www.instagram.com/${item.user.social.instagram_username}`)
+                        <Text style={{ color: 'blue' }} onPress={() => {
+                            Linking.openURL(item.user.social.instagram_username)
                         }}>
                             {instagram_username}
                         </Text>
-                        <Text style={{color: 'blue'}} onPress={() => {
+                        <Text style={{ color: 'blue' }} onPress={() => {
                             Linking.openURL(item.user.portfolio_url)
                         }}>
                             {portfolio_url}
@@ -54,7 +54,7 @@ export default function Profile({task, closeProfile}) {
             </View>
             <View style={styles.containerkpi}>
                 <View style={styles.kpiR}>
-                    <Image 
+                    <Image
                         style={styles.image2}
                         source={require('../../../assets/like.png')}
                     />
@@ -62,12 +62,13 @@ export default function Profile({task, closeProfile}) {
             </View>
             <View>
                 <TouchableOpacity onPress={closeProfile}>
-                    <Text>X</Text>
+                    <Text>Cerrar</Text>
                 </TouchableOpacity>
             </View>
         </View>
     )
 }
+
 
 const styles = StyleSheet.create({
     item: {
@@ -87,7 +88,6 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     leftSide: {
-        flex: 1,
         flexBasis: "50%",
         display: "flex",
         justifyContent: "center",
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
     },
     redes: {
         width: "100%",
         display: "flex",
+        justifyContent: "space-around",
         alignItems: "center",
-        flexDirection: "column",
-        justifyContent: "space-between",
+        flexDirection: "row",
     },
     containerkpi: {
         width: 100,
