@@ -2,13 +2,11 @@ import React from 'react'
 import { Image, StyleSheet, View, Text } from 'react-native'
 
 export default function Task({ task }) {
-    const { item } = task
-
     return (
         <View style={styles.item}>
             <View style={styles.itemLeft}>
-                <Image style={styles.image} source={{ uri: item.urls.raw }} />
-                <Text style={styles.itemText}>{item.alt_description}</Text>
+                <Image style={styles.image} source={{ uri: task.urls.raw }} />
+                <Text style={styles.itemText}>{task.alt_description}</Text>
             </View>
         </View>
     )

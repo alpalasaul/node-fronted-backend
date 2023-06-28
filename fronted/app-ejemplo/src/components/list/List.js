@@ -34,7 +34,7 @@ export default function List() {
         setShowProfile(!showProfile)
     }
 
-    const Item = ({task, i}) => {
+    const Item = ({ task, i }) => {
         return (
             <TouchableOpacity style={styles.peritem} key={i} onPress={() => getProfile(task)}>
                 <Task task={task} />
@@ -42,16 +42,16 @@ export default function List() {
         )
     }
 
-    return(taskItems &&
+    return (taskItems &&
         <View style={styles.container}>
             <View style={styles.taskWrapper}>
                 <Text style={styles.sectionTitle}>
                     Se listan los perfiles
                 </Text>
                 <View style={styles.items}>
-                    <FlatList 
+                    <FlatList
                         data={taskItems}
-                        renderItem={(item, i) => <Item task={item} i={i} />}    
+                        renderItem={({ item, i }) => <Item task={item} i={i} />}
                     >
                     </FlatList>
                 </View>
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 22
-    }, 
+    },
     modalView: {
         margin: 0,
         backgroundColor: "white",

@@ -11,11 +11,6 @@ const initialData = [
     id: 0,
     nombre: "Junior",
     apellido: "Alpala"
-  },
-  {
-    id: 1,
-    nombre: "Daniela",
-    apellido: "Mera"
   }
 ]
 
@@ -24,7 +19,6 @@ const initialFullName = { nombre: '', apellido: '' }
 export default function Form() {
 
   const [fullName, setFullName] = useState(initialFullName)
-  const [data, setData] = useState()
   const [listNames, setListNames] = useState(initialData)
 
   const onSubmit = async () => {
@@ -34,12 +28,11 @@ export default function Form() {
       const newList = listNames.map((item) => (item.id === fullName.id ? fullName : item));
       setListNames(newList)
     } else {
-      // const response = await fetch(`http://localhost:3000/hola/${nombre}/${apellido}`)
-      // const data = await response.json()
-      // data.id = getLastId()
-      // setData(data)
+      const response = await fetch(`http://localhost:3000/hola/${nombre}/${apellido}`)
+      const jsonData = await response.json()
       const newId = getLastId();
-      setListNames((prevValues) => [...prevValues, { id: newId, nombre, apellido }]);
+      setListNames((prevValues) => [...prevValues, { id: newId, ...jsonData }]);
+      // setListNames((prevValues) => [...prevValues, { id: newId, nombre, apellido }]);
     }
     setFullName(initialFullName)
   }
@@ -65,14 +58,8 @@ export default function Form() {
     setFullName(listNames.find((item) => item.id === id))
   }
 
-  const NameCard = ({ data }) => (
-    <Text style={styles.nameCard}>
-      {data.nombre} {data.apellido}
-    </Text>
-  )
-
-  const Item = ({ data }) => {
-    const { id, nombre, apellido } = data.item
+  const Card = ({ data }) => {
+    const { id, nombre, apellido } = data
     return (
       <View style={styles.containerItem}>
         <View style={styles.itemFullName}>
@@ -117,7 +104,7 @@ export default function Form() {
 
       <FlatList
         data={listNames}
-        renderItem={(data) => <Item data={data} />}
+        renderItem={({ item }) => <Card data={item} />}
       >
       </FlatList>
 
