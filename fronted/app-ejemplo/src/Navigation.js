@@ -11,7 +11,7 @@ const Tab = createBottomTabNavigator();
 export default function Navigation() {
     return (
         <Tab.Navigator>
-            <Tab.Screen name="Menu" component={ProfileCard} options={{
+            {/* <Tab.Screen name="Menu" component={ProfileCard} options={{
                 tabBarLabel: "Inicio",
                 tabBarIcon: ({color, size}) => {
                     return <MaterialCommunityIcons name="home" color={color} size={size} />
@@ -22,7 +22,7 @@ export default function Navigation() {
                 tabBarIcon: ({color, size}) => {
                     return <MaterialCommunityIcons name="clipboard-list" color={color} size={size} />
                 }
-            }} />
+            }} /> */}
             <Tab.Screen name="Nombre" component={Form} options={{
                 tabBarLabel: "Nombre",
                 tabBarIcon: ({color, size}) => {
