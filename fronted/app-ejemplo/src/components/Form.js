@@ -156,16 +156,6 @@ const styles = StyleSheet.create({
     fontSize: 10,
     textAlign: 'center'
   },
-  nameCard: {
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    // marginBottom: 10,
-    borderRadius: 20,
-    minWidth: "75%",
-    fontSize: 15,
-    fontWeight: 'bold',
-    textAlign: 'center'
-  },
   containerItem: {
     display: 'flex',
     flexDirection: 'row',

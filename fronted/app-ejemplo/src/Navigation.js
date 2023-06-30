@@ -1,10 +1,10 @@
 import { StyleSheet } from "react-native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Menu from "./components/home/Menu";
 import ProfileCard from "./components/home/ProfileCard";
 import { MaterialCommunityIcons } from "react-native-vector-icons"
 import List from "./components/list/List";
 import Form from "./components/Form";
+import Chat from "./components/chat/Chat";
 
 const Tab = createBottomTabNavigator();
 
@@ -27,6 +27,12 @@ export default function Navigation() {
                 tabBarLabel: "Nombre",
                 tabBarIcon: ({ color, size }) => {
                     return <MaterialCommunityIcons name="pencil-circle-outline" color={color} size={size} />
+                }
+            }} />
+            <Tab.Screen name="ChatGPT" component={Chat} options={{
+                tabBarLabel: "ChatGPT",
+                tabBarIcon: ({ color, size }) => {
+                    return <MaterialCommunityIcons name="chat-outline" color={color} size={size} />
                 }
             }} />
             <Tab.Screen name="Profile" component={ProfileCard} options={{
