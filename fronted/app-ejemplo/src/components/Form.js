@@ -14,6 +14,8 @@ const initialData = [
   }
 ]
 
+// temperatura contexto / respuesta
+
 const initialFullName = { nombre: '', apellido: '' }
 
 export default function Form() {
@@ -28,11 +30,11 @@ export default function Form() {
       const newList = listNames.map((item) => (item.id === fullName.id ? fullName : item));
       setListNames(newList)
     } else {
-      const response = await fetch(`http://localhost:3000/hola/${nombre}/${apellido}`)
-      const jsonData = await response.json()
+      // const response = await fetch(`http://localhost:3000/hola/${nombre}/${apellido}`)
+      // const jsonData = await response.json()
       const newId = getLastId();
-      setListNames((prevValues) => [...prevValues, { id: newId, ...jsonData }]);
-      // setListNames((prevValues) => [...prevValues, { id: newId, nombre, apellido }]);
+      // setListNames((prevValues) => [...prevValues, { id: newId, ...jsonData }]);
+      setListNames((prevValues) => [...prevValues, { id: newId, nombre, apellido }]);
     }
     setFullName(initialFullName)
   }
