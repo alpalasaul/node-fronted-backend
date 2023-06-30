@@ -10,12 +10,16 @@ export function useCompletition() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: 'Bearer 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'
+          Authorization: 'Bearer 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'
         },
         body: JSON.stringify({
-          prompt: prompt,
+          prompt: "Convierte esto a un numero binario" + prompt,
           max_tokens: 50,
           model: 'text-davinci-003',
+          // message: [{
+          //   "role": "user",
+          //   "content": "Eres un convertitextdor binario que convierte numeros naturales a binario."
+          // }],
           temperature: 0,
           n: 1,
           // stop: ".",
@@ -23,7 +27,9 @@ export function useCompletition() {
       }
     )
     const data = await response.json()
-    setListMessage((prevValues) => [...prevValues, { id: prevValues.length, prompt: prompt,  message: data.choices[0].text.replace(/(\r\n|\n|\r)/gm, "") }])
+    let numTokens = data.usage.total_tokens
+    let message = data.choices[0].text.replace(/(\r\n|\n|\r)/gm, "")
+    setListMessage((prevValues) => [...prevValues, { id: prevValues.length, prompt: prompt, numTokens: numTokens, message: message }])
     setPrompt('')
   }
 

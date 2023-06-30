@@ -11,11 +11,12 @@ const Chat = () => {
   const { listMessage, clearList, prompt, setPrompt, onSubmit } = useCompletition()
 
   const Item = ({ item }) => {
-    const { id, message, prompt } = item
+    const { id, message, prompt, numTokens } = item
     return (
       <View key={id}>
         <Text style={styles.prompt}> {"🧔"} {prompt}</Text>
         <Text style={styles.item}>{"🤖"} {message}</Text>
+        <Text style={styles.token}>Token utilizados: {numTokens}</Text>
       </View>
     )
   }
@@ -123,5 +124,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 5,
     padding: 5,
+  },
+  token: {
+    fontWeight: 'bold',
+    margin: 5,
+    marginLeft: 10,
   }
 })

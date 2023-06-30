@@ -5,6 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 const twitter = <Icon name='twitter' size={30} color="black" />
 const instagram = <Icon name='instagram' size={30} color="black" />
 const linkedin = <Icon name='linkedin' size={30} color="black" />
+const tiktok = <Icon name='tiktok' size={30} color="black" />
 
 export default function ProfileCard() {
 
@@ -16,9 +17,9 @@ export default function ProfileCard() {
 
     return (
         <View style={styles.container}>
-            <Image source={{ uri: user.coverPhoto }} style={styles.coverPhoto} />
+            <Image source={require('../../../assets/portada_me.jpg')} style={styles.coverPhoto} />
             <View style={styles.avatarContainer}>
-                <Image source={{ uri: user.avatar }} style={styles.avatar} />
+                <Image source={require('../../../assets/me_photo.jpg')} style={styles.avatar} />
                 <Text style={styles.name}>
                     {user.name}
                 </Text>
@@ -32,6 +33,9 @@ export default function ProfileCard() {
                 </Text>
                 <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://linkedin.com/alpalasaul")}>
                     {linkedin}
+                </Text>
+                <Text style={{color: "blue"}} onPress={() => Linking.openURL("https://linkedin.com/alpalasaul")}>
+                    {tiktok}
                 </Text>
             </View>
         </View>
