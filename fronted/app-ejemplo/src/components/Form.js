@@ -6,13 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 const pencilIcon = <Icon name='pencil' size={15} color="blue" />
 const trashIcon = <Icon name='trash' size={15} color="red" />
 
-const initialData = [
-  {
-    id: 0,
-    nombre: "Junior",
-    apellido: "Alpala"
-  }
-]
+const initialData = []
 
 // temperatura contexto / respuesta
 
@@ -140,7 +134,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
     borderRadius: 15,
     textAlign: 'center',
-    fontSize: 10
+    // fontSize: 10
   },
   button: {
     width: 120,
@@ -155,7 +149,7 @@ const styles = StyleSheet.create({
   },
   textButton: {
     color: 'white',
-    fontSize: 10,
+    // fontSize: 10,
     textAlign: 'center'
   },
   containerItem: {

@@ -22,30 +22,29 @@ borrar el usuario
 */
 
 export default function Profile({ task, closeProfile }) {
-    const item = task.item
     return (
         <View style={styles.item}>
             <View style={styles.supimage}>
                 <View style={styles.leftSide}>
                     <Image
                         style={styles.image}
-                        source={{ uri: item.urls.raw }}
+                        source={{ uri: task.urls.raw }}
                     />
                 </View>
                 <View style={styles.rightSide}>
                     <Text style={{ color: 'blue' }} onPress={() => {
-                        Linking.openURL(item.user.portfolio_url)
+                        Linking.openURL(task.user.portfolio_url)
                     }} >
-                        {item.user.name}
+                        {task.user.name}
                     </Text>
                     <View style={styles.redes}>
                         <Text style={{ color: 'blue' }} onPress={() => {
-                            Linking.openURL(item.user.social.instagram_username)
+                            Linking.openURL(task.user.social.instagram_username)
                         }}>
                             {instagram_username}
                         </Text>
                         <Text style={{ color: 'blue' }} onPress={() => {
-                            Linking.openURL(item.user.portfolio_url)
+                            Linking.openURL(task.user.portfolio_url)
                         }}>
                             {portfolio_url}
                         </Text>

@@ -28,7 +28,8 @@ const Chat = () => {
         listMessage.length === 0
         &&
         <View style={styles.titleVoid}>
-          <Text style={styles.message}>¡Hola! Soy un bot que te ayudará a completar tus frases. Escribe algo para comenzar.</Text>
+          <Text style={styles.message}>¡Hola! Soy un bot que te ayudará a responder tus preguntas. Escribe algo para comenzar.</Text>
+          <Text style={{ fontSize: 50}}>{"🐧"}</Text>
         </View>
       }
       <FlatList
@@ -104,7 +105,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'gray',
     width: 370,
-    height: 100,
+    height: 150,
     backgroundColor: 'white',
     borderRadius: 10,
     justifyContent: 'center',
@@ -113,7 +114,6 @@ const styles = StyleSheet.create({
   message: {
     fontSize: 16,
     textAlign: 'center',
-    color: 'gray',
   },
   prompt: {
     fontSize: 14,
