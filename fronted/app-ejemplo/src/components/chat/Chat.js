@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import { FlatList } from 'react-native'
 import { View, Text, StyleSheet } from 'react-native'
-import { useCompletition } from '../hooks/useCompletition'
+import { useCompletion } from '../hooks/useCompletion'
 import MessageInput from './MessageInput'
 import Icon from 'react-native-vector-icons/FontAwesome'
 import Item from './Item'
@@ -10,7 +10,7 @@ const trashIcon = <Icon name='trash' size={20} color="red" />
 
 const Chat = () => {
   const flatList = useRef(null)
-  const { listMessage, clearList, prompt, setPrompt, onSubmit } = useCompletition()
+  const { listMessage, clearList, prompt, setPrompt, onSubmit } = useCompletion()
 
   return (
     <View style={styles.container}>

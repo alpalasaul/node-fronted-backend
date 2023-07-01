@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { completionApi } from '../service/completionApi'
 
-export function useCompletition() {
+export function useCompletion() {
   const [prompt, setPrompt] = useState('')
   const [listMessage, setListMessage] = useState([])
 

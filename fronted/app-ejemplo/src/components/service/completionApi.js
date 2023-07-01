@@ -27,7 +27,7 @@ export const completionApi = async ({ prompt }) => {
 
     const data = await response.json()
     let numTokens = data.usage?.total_tokens || 0
-    let message = data.choices[0].message.content
+    let message = data.choices[0]?.message?.content || 'No se puedo procesar la solicitud'
     return { numTokens, message }
   } catch (error) {
     throw new Error('Error al obtener la respuesta de la API')
