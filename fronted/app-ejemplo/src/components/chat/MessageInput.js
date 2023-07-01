@@ -15,6 +15,7 @@ const MessageInput = ({ onSubmit, prompt, setPrompt }) => {
       <TextInput
         style={styles.inputText}
         multiline
+        keyboardType='numeric'
         placeholder="Escribe tu mensaje..."
         value={prompt}
         onChangeText={handleChange}

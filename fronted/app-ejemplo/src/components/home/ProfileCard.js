@@ -5,13 +5,13 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 const twitter = <Icon name='twitter' size={30} color="black" />
 const instagram = <Icon name='instagram' size={30} color="black" />
 const linkedin = <Icon name='linkedin' size={30} color="black" />
-const tiktok = <Icon name='tiktok' size={30} color="black" />
+const tiktok = <Icon name='facebook' size={30} color="black" />
 
 export default function ProfileCard() {
 
     const user = {
-        avatar: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80",
-        coverPhoto: "https://biteable.com/wp-content/uploads/2019/07/Facebook-Cover-Video-Guide.png",
+        avatar: "../../../assets/portada_me.jpg",
+        coverPhoto: "../../../assets/me_photo.jpg",
         name: "Junior Alpala"
     }
 
