@@ -41,6 +41,6 @@ export function useCompletition() {
     setListMessage([])
   }
 
-  return { listMessage, prompt, clearList, setPrompt, onSubmit }
+  return { listMessage, prompt, setPrompt, clearList, onSubmit }
 
 }

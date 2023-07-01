@@ -6,21 +6,24 @@ const Item = ({ item }) => {
   return (
     <View key={id} style={styles.containerItem}>
       <View style={styles.containerPrompt}>
-        <Text style={styles.text}>{"🧔"} </Text>
         <Text style={styles.text}>{prompt}</Text>
       </View>
 
       {
         !loading && (
-          <View style={styles.containerMessage}>
-            <Text style={styles.text}>{"🤖"}</Text>
-            <Text style={styles.text}>
-              {message}
-              {"\n"}
-              <Text style={{ fontWeight: 'bold' }}>
-                Tokens: {numTokens}
+          <View style={styles.containerAvatar}>
+            <View>
+              <Text style={styles.avatar}>{"🤖"}</Text>
+            </View>
+            <View style={styles.containerMessage}>
+              <Text style={[styles.text, styles.messageText]}>
+                {message}
+                {"\n"}
+                <Text style={styles.boldText}>
+                  Tokens: {numTokens}
+                </Text>
               </Text>
-            </Text>
+            </View>
           </View>
         )
       }
@@ -32,10 +35,9 @@ export default Item;
 
 const styles = StyleSheet.create({
   containerItem: {
-    width: 350
+    width: 380
   },
   containerPrompt: {
-    flex: 1,
     backgroundColor: 'orange',
     maxWidth: '80%',
     borderRadius: 10,
@@ -44,8 +46,10 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-end',
     marginBottom: 10
   },
+  containerAvatar: {
+    flexDirection: 'row'
+  },
   containerMessage: {
-    flex: 1,
     flexDirection: 'row',
     backgroundColor: '#045C94',
     borderRadius: 10,
@@ -56,7 +60,15 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    paddingHorizontal: 5,
-    maxWidth: '80%',
+    maxWidth: '100%',
+  },
+  messageText: {
+    flexShrink: 1,
+  },
+  boldText: {
+    fontWeight: 'bold',
+  },
+  avatar: {
+    width: 20,
   }
 })

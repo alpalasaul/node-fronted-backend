@@ -14,7 +14,7 @@ const Chat = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>ChatGPT</Text>
+      <Text style={styles.title}>Conversación</Text>
       {
         listMessage.length === 0
         &&
@@ -27,7 +27,7 @@ const Chat = () => {
         ref={flatList}
         data={listMessage}
         renderItem={({ item }) => <Item item={item} />}
-        onContentSizeChange={() => flatList.current.scrollToEnd({ animated: true })}
+        onContentSizeChange={() => listMessage.length > 0 && flatList.current.scrollToEnd({ animated: true })}
       />
       {
         listMessage.length > 0
