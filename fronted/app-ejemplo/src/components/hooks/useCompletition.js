@@ -16,6 +16,8 @@ export function useCompletition() {
         loading: true
       }
     ])
+    
+    setPrompt('')
 
     const { message, numTokens } = await completionApi({ prompt })
 
@@ -32,7 +34,7 @@ export function useCompletition() {
         return item
       })
     )
-    setPrompt('')
+    
   }
 
   const clearList = () => {
@@ -40,5 +42,5 @@ export function useCompletition() {
   }
 
   return { listMessage, prompt, clearList, setPrompt, onSubmit }
-  
+
 }

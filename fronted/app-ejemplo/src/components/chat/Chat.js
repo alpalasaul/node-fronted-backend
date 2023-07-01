@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { FlatList } from 'react-native'
 import { View, Text, StyleSheet } from 'react-native'
 import { useCompletition } from '../hooks/useCompletition'
@@ -9,6 +9,7 @@ import Item from './Item'
 const trashIcon = <Icon name='trash' size={20} color="red" />
 
 const Chat = () => {
+  const flatList = useRef(null)
   const { listMessage, clearList, prompt, setPrompt, onSubmit } = useCompletition()
 
   return (
@@ -23,8 +24,10 @@ const Chat = () => {
         </View>
       }
       <FlatList
+        ref={flatList}
         data={listMessage}
         renderItem={({ item }) => <Item item={item} />}
+        onContentSizeChange={() => flatList.current.scrollToEnd({ animated: true })}
       />
       {
         listMessage.length > 0

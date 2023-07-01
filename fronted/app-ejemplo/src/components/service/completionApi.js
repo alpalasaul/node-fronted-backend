@@ -1,4 +1,4 @@
-const API_KEY = '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'
+import { OPENAI_API_KEY } from '@env';
 
 export const completionApi = async ({ prompt }) => {
   if (prompt == '') return
@@ -7,7 +7,7 @@ export const completionApi = async ({ prompt }) => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${API_KEY}`
+        Authorization: `Bearer ${OPENAI_API_KEY}`
       },
       body: JSON.stringify({
         prompt: "Convierte esto a un número binario: " + prompt,
