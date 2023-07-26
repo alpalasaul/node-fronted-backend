@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, StyleSheet, View, Text, Linking } from 'react-native'
+import { Image, StyleSheet, View, Text, Linking, StatusBar } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
 const twitter = <Icon name='twitter' size={30} color="black" />
@@ -45,7 +45,8 @@ export default function ProfileCard() {
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-        alignItems: 'center'
+        alignItems: 'center',
+        marginTop: StatusBar.currentHeight || 0,
     },
     coverPhoto: {
         width: "100%",

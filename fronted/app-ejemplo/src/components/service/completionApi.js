@@ -30,6 +30,7 @@ export const completionApi = async ({ prompt }) => {
     let message = data.choices[0]?.message?.content || 'No se puedo procesar la solicitud'
     return { numTokens, message }
   } catch (error) {
+    console.log(error)
     throw new Error('Error al obtener la respuesta de la API')
   }
 }

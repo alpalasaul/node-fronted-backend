@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, StatusBar } from 'react-native'
 import { StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome'
 
@@ -113,7 +113,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    marginTop: StatusBar.currentHeight || 0,
   },
   formContainer: {
     justifyContent: 'center',

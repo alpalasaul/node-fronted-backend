@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/FontAwesome'
 
 const sentIcon = <Icon name='location-arrow' size={15} color="white" />
 
-const MessageInput = ({ onSubmit, prompt, setPrompt }) => {
+const MessageInput = ({ onSubmit, prompt, setPrompt, type }) => {
 
   const handleChange = (value) => {
     setPrompt(value)
@@ -15,7 +15,7 @@ const MessageInput = ({ onSubmit, prompt, setPrompt }) => {
       <TextInput
         style={styles.inputText}
         multiline
-        keyboardType='numeric'
+        keyboardType={type ? type : "default"}
         placeholder="Escribe tu mensaje..."
         value={prompt}
         onChangeText={handleChange}
@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   inputText: {
     width: 300,
     backgroundColor: "white",
-    color: "gray",
+    color: "#363636",
     paddingHorizontal: 10,
     paddingVertical: 5,
     marginBottom: 10,

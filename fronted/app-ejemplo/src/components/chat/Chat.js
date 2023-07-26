@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { FlatList } from 'react-native'
+import { FlatList, StatusBar } from 'react-native'
 import { View, Text, StyleSheet } from 'react-native'
 import { useCompletion } from '../hooks/useCompletion'
 import MessageInput from './MessageInput'
@@ -36,7 +36,7 @@ const Chat = () => {
           {trashIcon}
         </Text>
       }
-      <MessageInput prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} />
+      <MessageInput prompt={prompt} setPrompt={setPrompt} onSubmit={onSubmit} type="numeric" />
     </View>
   )
 }
@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
+    marginTop: StatusBar.currentHeight || 0
   },
   title: {
     fontSize: 26,
